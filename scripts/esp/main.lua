@@ -5,13 +5,11 @@ print("Succesfully injected !")
 local CoreGui = game:GetService("StarterGui")
 local player = game.Players.LocalPlayer
 
--- Settings
-_G.Settings = {
-	['ESP_Keybind'] = 'p', --ESP Keybinds
-}
-
 -- Lib
 local esp = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua", true))()
+
+-- Settings
+esp.Keybind = 'p'
 
 CoreGui:SetCore("SendNotification", {
 		Title = "ESP Injected";
@@ -21,7 +19,7 @@ CoreGui:SetCore("SendNotification", {
 })
 
 player:GetMouse().KeyDown:connect(function(key)
-	if key == _G.Settings['ESP_Keybind'] then
+	if key == esp.Keybind then
 		if esp.Enabled == true then
 			esp:Toggle(false)
 		else
@@ -29,5 +27,13 @@ player:GetMouse().KeyDown:connect(function(key)
 		end
 	end
 end)
+
+function esp:SetPremade(premade)
+	if premade = "arsenal" then
+		esp.FaceCamera = true
+		esp.Names = false
+		esp.TeamMates = false
+	end
+end
 
 return esp
