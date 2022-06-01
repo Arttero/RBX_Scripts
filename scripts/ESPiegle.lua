@@ -34,5 +34,3 @@ player:GetMouse().KeyDown:connect(function(key)
 		end
 	end
 end)
-
-return esp
