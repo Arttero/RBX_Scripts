@@ -7,7 +7,7 @@ local player = game.Players.LocalPlayer
 
 --
 esp_conf = {
-	['ESP_Keybind'] = 'P', --ESP Keybinds
+	['ESP_Keybind'] = 'p', --ESP Keybinds
 }
 
 -- Settings
@@ -35,4 +35,4 @@ player:GetMouse().KeyDown:connect(function(key)
 	end
 end)
 
-return = esp
+return esp
