@@ -26,7 +26,13 @@ api.Keybind = 'p' --Must be lowercase
 --LIST OF VALUE BELOW
 
 ```
+You can also apply a preset
+```lua
+local api = loadstring(game:HttpGet("https://pastebin.com/raw/jvu30n6N"))()
 
+--            \/- Value here
+api:Preset("arsenal")
+```
 
 ## Values
 
@@ -34,6 +40,20 @@ Name | Boxes | Color | FaceCamera | Names | TeamColor | TeamMates | Players |
 --- | --- | --- | --- |--- |--- |--- |--- |
 Base State | true | (255, 170, 0) | false | false | true | true | true |
 
+
+## Presets
+
+Name | Arsenal | 
+--- | --- 
+Value | arsenal |
+
+### Presets change
+ 
+#### Arsenal
+
+Name | FaceCamera | Names | TeamMates |
+--- | --- | --- | ---
+State | true | false | false |
 
 ## Notes
 * _Color need to be a Color3.fromRGB_
