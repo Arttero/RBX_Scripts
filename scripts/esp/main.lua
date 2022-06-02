@@ -13,9 +13,9 @@ esp.Keybind = 'p'
 
 CoreGui:SetCore("SendNotification", {
 		Title = "ESP Injected";
-		Text = "Press "..string.upper(_G.Settings['ESP_Keybind']).." to toggle";
+		Text = "Press "..string.upper(esp.Keybind).." to toggle";
 		Duration = 5;
-		Icon = "rbxthumb://type=Asset&id=8217650146&w=150&h=150";
+		Icon = "rbxthumb://type=Asset&id=9799225632&w=150&h=150";
 })
 
 player:GetMouse().KeyDown:connect(function(key)
@@ -29,7 +29,7 @@ player:GetMouse().KeyDown:connect(function(key)
 end)
 
 function esp:Preset(preset)
-	if preset = "arsenal" then
+	if preset == "arsenal" then
 		esp.FaceCamera = true
 		esp.Names = false
 		esp.TeamMates = false
