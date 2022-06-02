@@ -20,19 +20,28 @@ CoreGui:SetCore("SendNotification", {
 
 player:GetMouse().KeyDown:connect(function(key)
 	if key == esp.Keybind then
+		esp:reverseToggle()
+	end
+end)
+
+function esp:reverseToggle()
+	if esp.Enabled == true then
 		if esp.Enabled == true then
 			esp:Toggle(false)
 		else
 			esp:Toggle(true)
 		end
 	end
-end)
+end
 
 function esp:Preset(preset)
 	if preset == "arsenal" then
 		esp.FaceCamera = true
 		esp.Names = false
 		esp.TeamMates = false
+		---
+		esp:reverseToggle()
+		esp:reverseToggle()
 	end
 end
 
