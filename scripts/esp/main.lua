@@ -28,8 +28,8 @@ player:GetMouse().KeyDown:connect(function(key)
 	end
 end)
 
-function esp:SetPremade(premade)
-	if premade = "arsenal" then
+function esp:Preset(preset)
+	if preset = "arsenal" then
 		esp.FaceCamera = true
 		esp.Names = false
 		esp.TeamMates = false
