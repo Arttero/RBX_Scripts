@@ -1,6 +1,4 @@
-![The Logo](/scripts/NoNames/NoNames.png)
-
-# <p align="center">No Names</p>
+# <p align="center">![No Names](/scripts/NoNames/NoNames.png)</p>
 
 ## Script
 
