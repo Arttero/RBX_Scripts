@@ -19,7 +19,6 @@ CoreGui:SetCore("SendNotification", {
 })
 
 player:GetMouse().KeyDown:connect(function(key)
-	print(key)
 	if key == esp.Keybind then
 		esp:reverseToggle()
 	end
